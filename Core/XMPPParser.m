@@ -648,10 +648,12 @@ static void	xmpp_xmlStartElement(void *ctx, const xmlChar  *nodeName,
 				
 				xmlAttrPtr newAttr = xmlNewNsProp(newNode, attrNs, attrName, value);
 				CHECK_FOR_NULL(newAttr);
+                
+//                xmlFreePropList(newAttr);
 			}
+//            xmlFreeNs(attrNs);
 		}
-		
-		xmlFree(value);
+//		xmlFree(value);
 	}
 	
 	// Update our parent node pointer

@@ -332,7 +332,7 @@
 
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender
 {
-	XMPPLogTrace();
+    XMPPLogTrace();return;
 	
 	if (clientSideMessageArchivingOnly) return;
 	
